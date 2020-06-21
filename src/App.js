@@ -7,7 +7,7 @@ function App() {
   return (
     <div className='back'>
       <Child />
-      this is app
+    
      
     </div>
   );
