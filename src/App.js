@@ -7,8 +7,8 @@ function App() {
   return (
     
 
-    <div className='back'>
-      <Child />
+    <div>
+      <Child className="back"/>
     
      
     </div>

@@ -3,7 +3,7 @@
     min-height: 450px;
     margin: 0 auto;
     background-color: aquamarine;
-    box-shadow: blueviolet;
+    box-shadow: black;
     margin-top: 50px;
     padding: 15px 50px;
     margin-bottom: 50px;
@@ -46,6 +46,6 @@
     justify-content: center;
   }
   .back{
-    background-color: springgreen;
+    background-color:springgreen;
   }
   
