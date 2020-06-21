@@ -16,6 +16,8 @@
     justify-content: space-around;
     background-color: bisque;
     box-shadow: burlywood;
+    border-radius: 10px;
+  
   }
   .transaction-form input{
     width: 100%;
