@@ -5,7 +5,7 @@ import Child from './child';
 function App() {
   return (
     <div>
-      <Child/>
+      <Child />
      
     </div>
   );
