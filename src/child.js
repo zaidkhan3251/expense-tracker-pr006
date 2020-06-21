@@ -6,8 +6,8 @@ import './App.css';
 function Child() {
     let transactions = [
 
-        {amount: +500, desc: "cash"}
-        {amount: -40, desc: "book"}
+        {amount: +500, desc: "cash"},
+        {amount: -40, desc: "book"},
         {amount: -200, desc: "pen-set"}
     ]
     return (
