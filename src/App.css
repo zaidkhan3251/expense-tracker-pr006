@@ -35,6 +35,10 @@
     margin: 5px 0;
   }
   .submit-button{
-    color: darkcyan;
+    color: darkgreen;
+    background-color: darkcyan;
+  }
+  .back{
+    background-color: purple;
   }
   

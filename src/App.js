@@ -1,10 +1,11 @@
 import React from 'react';
 import Child from './child';
+import './App.css';
 
 
 function App() {
   return (
-    <div>
+    <div className='back'>
       <Child />
       this is app
      
