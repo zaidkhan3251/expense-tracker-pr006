@@ -6,6 +6,7 @@ function App() {
   return (
     <div>
       <Child />
+      this is app
      
     </div>
   );
