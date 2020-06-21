@@ -4,8 +4,9 @@
     margin: 0 auto;
     background-color: aquamarine;
     box-shadow: blueviolet;
-    margin-top: 5px;
+    margin-top: 5opx;
     padding: 15px 50px;
+    margin-bottom: 50px;
   }
   .text-container{
     text-align: center;
@@ -44,6 +45,6 @@
     justify-content: center;
   }
   .back{
-    background-color: purple;
+    background-color: springgreen;
   }
   
