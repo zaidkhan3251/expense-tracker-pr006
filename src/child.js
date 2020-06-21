@@ -4,6 +4,12 @@ import './App.css';
 
 
 function Child() {
+    let transactions = [
+
+        {amount: +500, desc: "cash"}
+        {amount: -40, desc: "book"}
+        {amount: -200, desc: "pen-set"}
+    ]
     return (
         <div className="container">
             <h1 className="text-container">Expense Tracker</h1>
@@ -16,19 +22,14 @@ function Child() {
             <h3>History</h3>
             <hr />
             <ul className="transaction-list">
+                {transactions.map((transObj, ind)=>{
+                    return( <li>
+                        <span>{transObj.desc}</span>
+                        <span>{transObj.amount}</span>
+                    </li>
 
-                <li>
-                    <span>cash</span>
-                    <span>+500</span>
-                </li>
-                <li>
-                    <span>cash</span>
-                    <span>+500</span>
-                </li>
-                <li>
-                    <span>cash</span>
-                    <span>+500</span>
-                </li>
+                    )
+                })}
             </ul>
             <h3>Add new transaction</h3>
             <hr />
