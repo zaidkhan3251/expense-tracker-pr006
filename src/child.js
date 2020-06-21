@@ -44,6 +44,7 @@ function Child() {
                     <input type="number" />
                 </label>
                 <br />
+                <br />
                 <input className='submit-button' type="submit" value="add Transaction" />
             </form>
         </div>

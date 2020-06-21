@@ -39,6 +39,7 @@
   .submit-button{
     color: darkgreen;
     background-color: darkcyan;
+    justify-content: center;
   }
   .back{
     background-color: purple;
