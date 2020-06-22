@@ -9,7 +9,7 @@ function Child() {
     let [newDesc, setDesc] = useState("");
     let [newAmount, setAmount] = useState(0);
 
-    const handleAddition = (event) =>{
+    const handleAddition = (event) => {
         event.preventDefault();
         if(Number(newAmount) === 0){
             alert("Please enter correct value");
@@ -20,7 +20,9 @@ function Child() {
             amount: Number(newAmount),
             desc: newDesc
 
-        })
+        });
+        setDesc('');
+        setAmount(0)
     }
     const getIncome = () => {
         let Income = 0;
@@ -47,8 +49,8 @@ function Child() {
             <h3>Your Balance<br />{getIncome()+getExpense()}</h3>
             <div className="expense-container"> 
             
-                <h3>INCOME <br />{getIncome()}</h3>
-                <h3>EXPENSE<br />{getExpense()}</h3>
+                <h3>INCOME <br />${getIncome()}</h3>
+                <h3>EXPENSE<br />${getExpense()}</h3>
             </div>
             <h3>History</h3>
             <hr />
@@ -56,7 +58,7 @@ function Child() {
                 {transactions.map((transObj, ind)=>{
                     return( <li key={ind}> 
                         <span>{transObj.desc}</span>
-                        <span>{transObj.amount}</span>
+                        <span>${transObj.amount}</span>
                     </li>
 
                     )
@@ -64,16 +66,17 @@ function Child() {
             </ul>
             <h3>Add new transaction</h3>
             <hr />
+            <br/>
 
             <form className="transaction-form" onSubmit={handleAddition}>
                 <label>
                     Enter Description<br />
-                    <input type="text" onChange={(ev)=>setDesc(ev.target.value)} required />
+                    <input type="text" value={newDesc} placeholder="Description" onChange={(ev)=>setDesc(ev.target.value)} required />
                 </label>
                 <br />
                 <label>
                     Enter Amount<br />
-                    <input type="number" onChane={(ev)=>setAmount(ev.target.value)} />
+                    <input type="number" value={newAmount} placeholder="Amount" onChane={(ev)=>setAmount(ev.target.value)} />
                 </label>
                 <br />
                 <br />
