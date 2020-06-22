@@ -8,10 +8,11 @@ function Child() {
     let {transactions, addTransaction } = useContext(TransactionContext);
     let [newDesc, setDesc] = useState("");
     let [newAmount, setAmount] = useState(0);
+
     const handleAddition = (event) =>{
         event.preventDefault();
         addTransaction({
-            amount: newAmount,
+            amount: Number(newAmount),
             desc: newDesc
 
         })
@@ -38,11 +39,11 @@ function Child() {
     return (
         <div className="container">
             <h1 className="text-container">Expense Tracker</h1>
-            <h3>Your Balance<br /> $260</h3>
+            <h3>Your Balance<br />{getIncome()+getExpense()}</h3>
             <div className="expense-container"> 
             
-                <h3>INCOME <br /> $500</h3>
-                <h3>EXPENSE<br /> $240</h3>
+                <h3>INCOME <br />{getIncome()}</h3>
+                <h3>EXPENSE<br />{getExpense()}</h3>
             </div>
             <h3>History</h3>
             <hr />
