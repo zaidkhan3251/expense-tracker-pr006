@@ -1,11 +1,40 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import {TransactionContext} from './transContext';
 import './App.css';
 
 
 
 function Child() {
-    let transactions = useContext(TransactionContext);
+    let {transactions, addTransaction } = useContext(TransactionContext);
+    let [newDesc, setDesc] = useState("");
+    let [newAmount, setAmount] = useState(0);
+    const handleAddition = (event) =>{
+        event.preventDefault();
+        addTransaction({
+            amount: newAmount,
+            desc: newDesc
+
+        })
+    }
+    const getIncome = () => {
+        let Income = 0;
+        for (var i = 0; i<transactions.length; i++){
+            if (transactions[i].amount>0)
+            Income+=transactions[i].amount
+        }
+        return Income;
+
+    }
+    const getExpense = () => {
+        let expense = 0;
+        for (var i = 0; i<transactions.length; i++){
+            if (transactions[i].amount>0)
+            expense+=transactions[i].amount
+        }
+        return expense;
+
+    }
+
     return (
         <div className="container">
             <h1 className="text-container">Expense Tracker</h1>
@@ -19,7 +48,7 @@ function Child() {
             <hr />
             <ul className="transaction-list">
                 {transactions.map((transObj, ind)=>{
-                    return( <li>
+                    return( <li key={ind}> 
                         <span>{transObj.desc}</span>
                         <span>{transObj.amount}</span>
                     </li>
@@ -30,15 +59,15 @@ function Child() {
             <h3>Add new transaction</h3>
             <hr />
 
-            <form className="transaction-form">
+            <form className="transaction-form" onSubmit={handleAddition}>
                 <label>
                     Enter Description<br />
-                    <input type="text" required />
+                    <input type="text" onChange={(ev)=>setDesc(ev.target.value)} required />
                 </label>
                 <br />
                 <label>
                     Enter Amount<br />
-                    <input type="number" />
+                    <input type="number" onChane={(ev)=>setAmount(ev.target.value)} />
                 </label>
                 <br />
                 <br />
