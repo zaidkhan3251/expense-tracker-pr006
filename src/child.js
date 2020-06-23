@@ -43,7 +43,7 @@ function Child() {
 
     return (
         <div className="container">
-            <h1 className="text-center">Expense Tracker</h1><hr/>
+            <h1 className="text-container">Expense Tracker</h1><hr/>
 
             <h3>Your Balance <br /> ${getIncome() + getExpense()}</h3>
 
@@ -55,7 +55,7 @@ function Child() {
             <h3>History</h3>
             <hr />
 
-            <ul className="trnsaction-list">
+            <ul className="transaction-list">
                 {transactions.map((transObj, ind) => {
                     return (<li key={ind}>
                         <span>{transObj.desc}</span>
@@ -67,8 +67,7 @@ function Child() {
             </ul>
 
             <h3>Add new transaction</h3>
-            <p>For Income write value with + sign</p>
-            <p>For Expence write value with - sign</p>
+            
             <hr />
 
             <form className="transaction-form" onSubmit={handleAddition}>
