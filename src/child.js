@@ -25,12 +25,12 @@ function Child() {
         setAmount(0)
     }
     const getIncome = () => {
-        let Income = 0;
+        let income = 0;
         for (var i = 0; i<transactions.length; i++){
             if (transactions[i].amount>0)
-            Income+=transactions[i].amount
+            income = income + transactions[i].amount
         }
-        return Income;
+        return income;
 
     }
     const getExpense = () => {
@@ -76,7 +76,7 @@ function Child() {
                 <br />
                 <label>
                     Enter Amount<br />
-                    <input type="number" value={newAmount} placeholder="Amount" onChane={(ev)=>setAmount(ev.target.value)} />
+                    <input type="number" value={newAmount} placeholder="Amount" onChane={(ev) => setAmount(ev.target.value)} required />
                 </label>
                 <br />
                 <br />
