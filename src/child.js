@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import {TransactionContext} from './transContext';
+import { TransactionContext } from './transContext';
 import './App.css';
 
 
@@ -11,7 +11,7 @@ function Child() {
 
     const handleAddition = (event) => {
         event.preventDefault();
-        if(Number(newAmount) === 0){
+        if(Number(newAmount) === 0) {
             alert("Please enter correct value");
             return false;
         }
@@ -80,7 +80,7 @@ function Child() {
                 </label>
                 <br />
                 <br />
-                <input className='submit-button' type="submit" value="add Transaction" />
+                <input className='submit-button' type="submit" value="Add Transaction" />
             </form>
         </div>
     );
