@@ -21,6 +21,15 @@
     border-radius: 10px;
   
   }
+  .balance{
+    color: blue;
+  }
+  .income{
+    color: chartreuse;
+  }
+  .expense{
+    color: red;
+  }
   .transaction-form input{
     width: 100%;
     margin: 10px 0;
